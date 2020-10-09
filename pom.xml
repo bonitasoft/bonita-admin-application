@@ -18,7 +18,7 @@
 		<admin-app-grouplist-id>adminGroupListBonitaV1</admin-app-grouplist-id>
 		<admin-app-rolelist-id>adminRoleListBonitaV1</admin-app-rolelist-id>
 		<admin-app-processlist-id>adminProcessListBonitaV1</admin-app-processlist-id>
-		<admin-app-profilelist-id>adminProfileListBonitaV1</admin-app-profilelist-id>
+		<admin-app-profilelist-id>adminProfilesBonitaV1</admin-app-profilelist-id>
 		<admin-app-tasklist-id>adminTaskListBonitaV1</admin-app-tasklist-id>
 		<admin-app-taskdetails-id>adminTaskDetailsBonitaV1</admin-app-taskdetails-id>
 		<admin-app-installexportorganization-id>adminInstallExportOrganizationBonitaV1</admin-app-installexportorganization-id>
@@ -168,7 +168,7 @@
 							<artifactItems>
 								<artifactItem>
 									<groupId>org.bonitasoft.web.pages</groupId>
-									<artifactId>page-admin-profile-list</artifactId>
+									<artifactId>page-admin-profiles</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
 								</artifactItem>
