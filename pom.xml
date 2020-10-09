@@ -13,16 +13,16 @@
 	<properties>
 		<web.pages.dir>web_page</web.pages.dir>
 		<living-app-layout-id>LayoutBonitaV6</living-app-layout-id>
-		<admin-app-casedetails-id>AdminCaseDetailsBonitaV1</admin-app-casedetails-id>
-		<admin-app-userlist-id>UserListBonitaV1</admin-app-userlist-id>
-		<admin-app-grouplist-id>AdminGroupsBonitaV1</admin-app-grouplist-id>
-		<admin-app-rolelist-id>AdminRolesBonitaV1</admin-app-rolelist-id>
-		<admin-app-processlist-id>AdminProcessListBonitaV1</admin-app-processlist-id>
-		<admin-app-profilelist-id>AdminProfilesBonitaV1</admin-app-profilelist-id>
-		<admin-app-tasklist-id>AdminTaskListBonitaV1</admin-app-tasklist-id>
-		<admin-app-taskdetails-id>AdminTaskDetailsBonitaV1</admin-app-taskdetails-id>
-		<admin-app-installexportorganization-id>installExportOrganizationBonitaV1</admin-app-installexportorganization-id>
-		<admin-app-resourcelist-id>ResourcesListBonitaV1</admin-app-resourcelist-id>
+		<admin-app-casedetails-id>adminCaseDetailsBonitaV1</admin-app-casedetails-id>
+		<admin-app-userlist-id>adminUserListBonitaV1</admin-app-userlist-id>
+		<admin-app-grouplist-id>adminGroupListBonitaV1</admin-app-grouplist-id>
+		<admin-app-rolelist-id>adminRoleListBonitaV1</admin-app-rolelist-id>
+		<admin-app-processlist-id>adminProcessListBonitaV1</admin-app-processlist-id>
+		<admin-app-profilelist-id>adminProfileListBonitaV1</admin-app-profilelist-id>
+		<admin-app-tasklist-id>adminTaskListBonitaV1</admin-app-tasklist-id>
+		<admin-app-taskdetails-id>adminTaskDetailsBonitaV1</admin-app-taskdetails-id>
+		<admin-app-installexportorganization-id>adminInstallExportOrganizationBonitaV1</admin-app-installexportorganization-id>
+		<admin-app-resourcelist-id>adminResourceListBonitaV1</admin-app-resourcelist-id>
 		<web.widgets.dir>web_widgets</web.widgets.dir>
 	</properties>
 
@@ -84,7 +84,7 @@
 							<artifactItems>
 								<artifactItem>
 									<groupId>org.bonitasoft.web.pages</groupId>
-									<artifactId>page-user-list</artifactId>
+									<artifactId>page-admin-user-list</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
 								</artifactItem>
@@ -105,7 +105,7 @@
 							<artifactItems>
 								<artifactItem>
 									<groupId>org.bonitasoft.web.pages</groupId>
-									<artifactId>page-admin-groups</artifactId>
+									<artifactId>page-admin-group-list</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
 								</artifactItem>
@@ -126,7 +126,7 @@
 							<artifactItems>
 								<artifactItem>
 									<groupId>org.bonitasoft.web.pages</groupId>
-									<artifactId>page-admin-roles</artifactId>
+									<artifactId>page-admin-role-list</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
 								</artifactItem>
@@ -168,7 +168,7 @@
 							<artifactItems>
 								<artifactItem>
 									<groupId>org.bonitasoft.web.pages</groupId>
-									<artifactId>page-admin-profiles</artifactId>
+									<artifactId>page-admin-profile-list</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
 								</artifactItem>
@@ -231,7 +231,7 @@
 							<artifactItems>
 								<artifactItem>
 									<groupId>org.bonitasoft.web.pages</groupId>
-									<artifactId>page-install-export-organization</artifactId>
+									<artifactId>page-admin-install-export-organization</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
 								</artifactItem>
@@ -252,7 +252,7 @@
 							<artifactItems>
 								<artifactItem>
 									<groupId>org.bonitasoft.web.pages</groupId>
-									<artifactId>page-resources-list</artifactId>
+									<artifactId>page-admin-resource-list</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
 								</artifactItem>
