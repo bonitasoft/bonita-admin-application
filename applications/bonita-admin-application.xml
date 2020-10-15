@@ -64,9 +64,6 @@
             <applicationMenu applicationPage="admin-application-list">
                 <displayName>Applications</displayName>
             </applicationMenu>
-            <applicationMenu applicationPage="admin-license">
-                <displayName>License</displayName>
-            </applicationMenu>
         </applicationMenus>
     </application>
 </applications>
