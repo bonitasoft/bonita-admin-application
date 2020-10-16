@@ -11,7 +11,8 @@
 	<name>Bonita Admin Application</name>
 
 	<properties>
-		<web.pages.dir>web_page</web.pages.dir>
+		<web.pages.dir>${project.build.directory}/web_page</web.pages.dir>
+    <web.widgets.dir>${project.build.directory}/web_widgets</web.widgets.dir>
 		<living-app-layout-id>LayoutBonitaV6</living-app-layout-id>
 		<admin-app-casedetails-id>adminCaseDetailsBonitaV1</admin-app-casedetails-id>
 		<admin-app-userlist-id>adminUserListBonitaV1</admin-app-userlist-id>
@@ -23,7 +24,6 @@
 		<admin-app-taskdetails-id>adminTaskDetailsBonitaV1</admin-app-taskdetails-id>
 		<admin-app-installexportorganization-id>adminInstallExportOrganizationBonitaV1</admin-app-installexportorganization-id>
 		<admin-app-resourcelist-id>adminResourceListBonitaV1</admin-app-resourcelist-id>
-		<web.widgets.dir>web_widgets</web.widgets.dir>
 	</properties>
 
 	<build>
@@ -311,9 +311,10 @@
 				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>
 					<descriptors>
-						<descriptor>bos-assembly.xml</descriptor>
+						<descriptor>community/bos-assembly.xml</descriptor>
+						<descriptor>subscription/bos-assembly-sp.xml</descriptor>
 					</descriptors>
-					<appendAssemblyId>false</appendAssemblyId>
+					<appendAssemblyId>true</appendAssemblyId>
 					<attach>false</attach>
 				</configuration>
 				<executions>
@@ -666,8 +667,20 @@
 						<id>rename-to-bos-extension</id>
 						<phase>package</phase>
 						<configuration>
-							<sourceFile>${project.build.directory}/${project.artifactId}-${project.version}.zip</sourceFile>
+							<sourceFile>${project.build.directory}/${project.artifactId}-${project.version}-bos.zip</sourceFile>
 							<destinationFile>${project.build.directory}/${project.artifactId}-${project.version}.bos</destinationFile>
+							<overWrite>true</overWrite>
+						</configuration>
+						<goals>
+							<goal>rename</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>rename-to-bos-extension-sp</id>
+						<phase>package</phase>
+						<configuration>
+							<sourceFile>${project.build.directory}/${project.artifactId}-${project.version}-bos-sp.zip</sourceFile>
+							<destinationFile>${project.build.directory}/${project.artifactId}-sp-${project.version}.bos</destinationFile>
 							<overWrite>true</overWrite>
 						</configuration>
 						<goals>
@@ -690,6 +703,11 @@
 								<artifact>
 									<type>bos</type>
 									<file>${project.build.directory}/${project.artifactId}-${project.version}.bos</file>
+								</artifact>
+								<artifact>
+									<type>bos</type>
+									<classifier>sp</classifier>
+									<file>${project.build.directory}/${project.artifactId}-sp-${project.version}.bos</file>
 								</artifact>
 							</artifacts>
 						</configuration>
