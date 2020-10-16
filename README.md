@@ -1,6 +1,6 @@
 # Bonita Admin Application
 
-This repository aggregates all the community development artifacts of the Bonita Admin Application
+This repository aggregates all the development artifacts of the Bonita Admin Application
 
 ## Build 
 
