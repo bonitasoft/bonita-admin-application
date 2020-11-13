@@ -5,7 +5,7 @@
         <applicationPages>
             <applicationPage customPage="custompage_adminUserDetailsBonita" token="admin-user-details"/>
             <applicationPage customPage="custompage_adminProcessDetailsBonita" token="admin-process-details"/>
-            <applicationPage customPage="custompage_adminCaseDetailsBonitaV1" token="admin-case-details"/>
+            <applicationPage customPage="custompage_adminCaseDetailsBonitaV2" token="admin-case-details"/>
             <applicationPage customPage="custompage_adminTaskDetailsBonitaV1" token="admin-task-details"/>
             <applicationPage customPage="custompage_adminProcessListBonitaV1" token="admin-process-list"/>
             <applicationPage customPage="custompage_adminCaseListBonita" token="admin-case-list"/>
