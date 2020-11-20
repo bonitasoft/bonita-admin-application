@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
     <application token="adminAppSP" version="1.0" profile="Administrator" homePage="admin-monitoring" state="ACTIVATED" layout="custompage_BonitaLayoutV6" theme="custompage_themeBonita">
-        <displayName>Bonita Admin Application</displayName>
+        <displayName>Bonita Administrator Application</displayName>
         <applicationPages>
             <applicationPage customPage="custompage_adminUserDetailsBonita" token="admin-user-details"/>
             <applicationPage customPage="custompage_adminProcessDetailsBonita" token="admin-process-details"/>
