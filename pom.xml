@@ -13,7 +13,7 @@
 	<properties>
 		<web.pages.dir>${project.build.directory}/web_page</web.pages.dir>
     <web.widgets.dir>${project.build.directory}/web_widgets</web.widgets.dir>
-		<living-app-layout-id>LayoutBonitaV6</living-app-layout-id>
+		<living-app-layout-id>LayoutBonitaV7</living-app-layout-id>
 		<admin-app-casedetails-id>adminCaseDetailsBonitaV2</admin-app-casedetails-id>
 		<admin-app-userlist-id>adminUserListBonitaV1</admin-app-userlist-id>
 		<admin-app-grouplist-id>adminGroupListBonitaV1</admin-app-grouplist-id>
