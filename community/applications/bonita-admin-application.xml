@@ -19,6 +19,9 @@
             <applicationPage customPage="custompage_adminProfileListBonitaV1" token="admin-profile-list"/>
             <applicationPage customPage="custompage_adminInstallExportOrganizationBonitaV1" token="admin-install-export-organization"/>
             <applicationPage customPage="custompage_adminResourceListBonitaV1" token="admin-resource-list"/>
+            <applicationPage customPage="custompage_Error403" token="error-403"/>
+            <applicationPage customPage="custompage_Error404" token="error-404"/>
+            <applicationPage customPage="custompage_Error500" token="error-500"/>
         </applicationPages>
         <applicationMenus>
             <applicationMenu>
