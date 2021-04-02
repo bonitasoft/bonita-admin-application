@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
-    <application token="adminApp" version="1.1" profile="Administrator" homePage="admin-process-list" state="ACTIVATED" layout="custompage_BonitaLayoutV7" theme="custompage_themeBonita">
+    <application token="adminApp" version="2.0" profile="Administrator" homePage="admin-process-list" state="ACTIVATED" layout="custompage_BonitaLayoutV7" theme="custompage_themeBonita">
         <displayName>Bonita Administrator Application</displayName>
         <applicationPages>
             <applicationPage customPage="custompage_adminUserDetailsBonita" token="admin-user-details"/>
@@ -8,7 +8,7 @@
             <applicationPage customPage="custompage_adminCaseDetailsBonitaV3" token="admin-case-details"/>
             <applicationPage customPage="custompage_adminTaskDetailsBonitaV1" token="admin-task-details"/>
             <applicationPage customPage="custompage_adminProcessListBonitaV2" token="admin-process-list"/>
-            <applicationPage customPage="custompage_adminCaseListBonita" token="admin-case-list"/>
+            <applicationPage customPage="custompage_adminCaseListBonitaV1" token="admin-case-list"/>
             <applicationPage customPage="custompage_adminApplicationListBonita" token="admin-application-list"/>
             <applicationPage customPage="custompage_adminApplicationDetailsBonita" token="admin-application-details"/>
             <applicationPage customPage="custompage_adminBDMBonita" token="admin-bdm"/>

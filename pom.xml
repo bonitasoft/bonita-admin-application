@@ -12,8 +12,9 @@
 
 	<properties>
 		<web.pages.dir>${project.build.directory}/web_page</web.pages.dir>
-    <web.widgets.dir>${project.build.directory}/web_widgets</web.widgets.dir>
+		<web.widgets.dir>${project.build.directory}/web_widgets</web.widgets.dir>
 		<living-app-layout-id>LayoutBonitaV7</living-app-layout-id>
+		<admin-app-caselist-id>adminCaseListBonitaV1</admin-app-caselist-id>
 		<admin-app-casedetails-id>adminCaseDetailsBonitaV3</admin-app-casedetails-id>
 		<admin-app-userlist-id>adminUserListBonitaV1</admin-app-userlist-id>
 		<admin-app-grouplist-id>adminGroupListBonitaV1</admin-app-grouplist-id>
@@ -53,6 +54,27 @@
 			<plugin>
 				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
+					<execution>
+						<id>get-bonita-admin-caselist-page</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.bonitasoft.web.pages</groupId>
+									<artifactId>page-admin-case-list</artifactId>
+									<version>${project.version}</version>
+									<type>zip</type>
+								</artifactItem>
+							</artifactItems>
+							<includes>resources/page.json,resources/assets/**</includes>
+							<outputDirectory>${web.pages.dir}/${admin-app-caselist-id}</outputDirectory>
+							<overWriteReleases>true</overWriteReleases>
+							<overWriteSnapshots>true</overWriteSnapshots>
+						</configuration>
+					</execution>
 					<execution>
 						<id>get-bonita-admin-casedetails-page</id>
 						<phase>generate-sources</phase>
@@ -358,6 +380,21 @@
 						</goals>
 					</execution>
 					<execution>
+						<id>move-admin-caselist-page-resources</id>
+						<phase>generate-sources</phase>
+						<configuration>
+							<target>
+								<move todir="${web.pages.dir}/${admin-app-caselist-id}"
+									failonerror="true">
+									<fileset dir="${web.pages.dir}/${admin-app-caselist-id}/resources" />
+								</move>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+					<execution>
 						<id>move-admin-casedetails-page-resources</id>
 						<phase>generate-sources</phase>
 						<configuration>
@@ -545,6 +582,18 @@
 				<groupId>com.coderplus.maven.plugins</groupId>
 				<artifactId>copy-rename-maven-plugin</artifactId>
 				<executions>
+					<execution>
+						<id>rename-admin-caselist-page-json-file</id>
+						<phase>generate-sources</phase>
+						<configuration>
+							<sourceFile>${web.pages.dir}/${admin-app-caselist-id}/page.json</sourceFile>
+							<destinationFile>${web.pages.dir}/${admin-app-caselist-id}/${admin-app-caselist-id}.json</destinationFile>
+							<overWrite>true</overWrite>
+						</configuration>
+						<goals>
+							<goal>rename</goal>
+						</goals>
+					</execution>
 					<execution>
 						<id>rename-admin-casedetails-page-json-file</id>
 						<phase>generate-sources</phase>
