@@ -17,7 +17,7 @@
 		<admin-app-caselist-id>adminCaseListBonitaV1</admin-app-caselist-id>
 		<admin-app-casedetails-id>adminCaseDetailsBonitaV3</admin-app-casedetails-id>
 		<admin-app-userlist-id>adminUserListBonitaV1</admin-app-userlist-id>
-		<admin-app-grouplist-id>adminGroupListBonitaV1</admin-app-grouplist-id>
+		<admin-app-grouplist-id>adminGroupListBonitaV2</admin-app-grouplist-id>
 		<admin-app-rolelist-id>adminRoleListBonitaV1</admin-app-rolelist-id>
 		<admin-app-processlist-id>adminProcessListBonitaV2</admin-app-processlist-id>
 		<admin-app-profilelist-id>adminProfileListBonitaV1</admin-app-profilelist-id>
