@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.bonitasoft.examples</groupId>
+	<groupId>org.bonitasoft.web.application</groupId>
 	<artifactId>bonita-admin-application</artifactId>
 	<version>7.13.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -26,6 +26,82 @@
 		<admin-app-installexportorganization-id>adminInstallExportOrganizationBonitaV1</admin-app-installexportorganization-id>
 		<admin-app-resourcelist-id>adminResourceListBonitaV1</admin-app-resourcelist-id>
 	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.bonitasoft.web.pages</groupId>
+			<artifactId>page-admin-case-list</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bonitasoft.web.pages</groupId>
+			<artifactId>page-admin-case-details</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bonitasoft.web.pages</groupId>
+			<artifactId>page-admin-user-list</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bonitasoft.web.pages</groupId>
+			<artifactId>page-admin-group-list</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bonitasoft.web.pages</groupId>
+			<artifactId>page-admin-role-list</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bonitasoft.web.pages</groupId>
+			<artifactId>page-admin-process-list</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bonitasoft.web.pages</groupId>
+			<artifactId>page-admin-profile-list</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bonitasoft.web.pages</groupId>
+			<artifactId>page-admin-task-list</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bonitasoft.web.pages</groupId>
+			<artifactId>page-admin-task-details</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bonitasoft.web.pages</groupId>
+			<artifactId>page-admin-install-export-organization</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bonitasoft.web.pages</groupId>
+			<artifactId>page-admin-resource-list</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bonitasoft.web.pages</groupId>
+			<artifactId>layout-bonita</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<pluginManagement>
@@ -750,6 +826,30 @@
 							<goal>rename</goal>
 						</goals>
 					</execution>
+					<execution>
+						<id>prepare-xml-artifact</id>
+						<phase>package</phase>
+						<configuration>
+							<sourceFile>community/applications/${project.artifactId}.xml</sourceFile>
+							<destinationFile>${project.build.directory}/${project.artifactId}-${project.version}.xml</destinationFile>
+							<overWrite>true</overWrite>
+						</configuration>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>prepare-xml-artifact-sp</id>
+						<phase>package</phase>
+						<configuration>
+							<sourceFile>subscription/applications/${project.artifactId}-sp.xml</sourceFile>
+							<destinationFile>${project.build.directory}/${project.artifactId}-sp-${project.version}.xml</destinationFile>
+							<overWrite>true</overWrite>
+						</configuration>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>
@@ -771,6 +871,15 @@
 									<type>bos</type>
 									<classifier>sp</classifier>
 									<file>${project.build.directory}/${project.artifactId}-sp-${project.version}.bos</file>
+								</artifact>
+								<artifact>
+									<type>xml</type>
+									<file>${project.build.directory}/${project.artifactId}-${project.version}.xml</file>
+								</artifact>
+								<artifact>
+									<type>xml</type>
+									<classifier>sp</classifier>
+									<file>${project.build.directory}/${project.artifactId}-sp-${project.version}.xml</file>
 								</artifact>
 							</artifacts>
 						</configuration>
