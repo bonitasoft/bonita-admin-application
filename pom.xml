@@ -414,6 +414,34 @@
 							<descriptors>
 								<descriptor>community/bos-assembly.xml</descriptor>
 							</descriptors>
+							<appendAssemblyId>true</appendAssemblyId>
+							<attach>false</attach>
+						</configuration>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>bos-sp</id>
+						<configuration>
+							<descriptors>
+								<descriptor>subscription/bos-assembly-sp.xml</descriptor>
+							</descriptors>
+							<appendAssemblyId>true</appendAssemblyId>
+							<attach>false</attach>
+						</configuration>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>zip</id>
+						<configuration>
+							<descriptors>
+								<descriptor>community/zip-assembly.xml</descriptor>
+							</descriptors>
 							<appendAssemblyId>false</appendAssemblyId>
 							<attach>false</attach>
 						</configuration>
@@ -423,13 +451,14 @@
 						</goals>
 					</execution>
 					<execution>
-						<id>sp</id>
+						<id>zip-sp</id>
 						<configuration>
 							<descriptors>
-								<descriptor>subscription/bos-assembly-sp.xml</descriptor>
+								<descriptor>subscription/zip-assembly.xml</descriptor>
 							</descriptors>
-							<appendAssemblyId>true</appendAssemblyId>
+							<appendAssemblyId>false</appendAssemblyId>
 							<attach>false</attach>
+							<finalName>${project.artifactId}-sp-${project.version}</finalName>
 						</configuration>
 						<phase>package</phase>
 						<goals>
@@ -806,7 +835,7 @@
 						<id>rename-to-bos-extension</id>
 						<phase>package</phase>
 						<configuration>
-							<sourceFile>${project.build.directory}/${project.artifactId}-${project.version}.zip</sourceFile>
+							<sourceFile>${project.build.directory}/${project.artifactId}-${project.version}-bos.zip</sourceFile>
 							<destinationFile>${project.build.directory}/${project.artifactId}-${project.version}.bos</destinationFile>
 							<overWrite>true</overWrite>
 						</configuration>
@@ -818,7 +847,7 @@
 						<id>rename-to-bos-extension-sp</id>
 						<phase>package</phase>
 						<configuration>
-							<sourceFile>${project.build.directory}/${project.artifactId}-${project.version}-sp.zip</sourceFile>
+							<sourceFile>${project.build.directory}/${project.artifactId}-${project.version}-bos-sp.zip</sourceFile>
 							<destinationFile>${project.build.directory}/${project.artifactId}-sp-${project.version}.bos</destinationFile>
 							<overWrite>true</overWrite>
 						</configuration>
@@ -842,7 +871,7 @@
 						<id>prepare-xml-artifact-sp</id>
 						<phase>package</phase>
 						<configuration>
-							<sourceFile>subscription/applications/${project.artifactId}-sp.xml</sourceFile>
+							<sourceFile>subscription/applications/${project.artifactId}.xml</sourceFile>
 							<destinationFile>${project.build.directory}/${project.artifactId}-sp-${project.version}.xml</destinationFile>
 							<overWrite>true</overWrite>
 						</configuration>
@@ -871,6 +900,15 @@
 									<type>bos</type>
 									<classifier>sp</classifier>
 									<file>${project.build.directory}/${project.artifactId}-sp-${project.version}.bos</file>
+								</artifact>
+								<artifact>
+									<type>zip</type>
+									<file>${project.build.directory}/${project.artifactId}-${project.version}.zip</file>
+								</artifact>
+								<artifact>
+									<type>zip</type>
+									<classifier>sp</classifier>
+									<file>${project.build.directory}/${project.artifactId}-sp-${project.version}.zip</file>
 								</artifact>
 								<artifact>
 									<type>xml</type>
