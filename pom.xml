@@ -13,18 +13,6 @@
 	<properties>
 		<web.pages.dir>${project.build.directory}/web_page</web.pages.dir>
 		<web.widgets.dir>${project.build.directory}/web_widgets</web.widgets.dir>
-		<living-app-layout-id>LayoutBonitaV8</living-app-layout-id>
-		<admin-app-caselist-id>adminCaseListBonitaV1</admin-app-caselist-id>
-		<admin-app-casedetails-id>adminCaseDetailsBonitaV3</admin-app-casedetails-id>
-		<admin-app-userlist-id>adminUserListBonitaV1</admin-app-userlist-id>
-		<admin-app-grouplist-id>adminGroupListBonitaV2</admin-app-grouplist-id>
-		<admin-app-rolelist-id>adminRoleListBonitaV1</admin-app-rolelist-id>
-		<admin-app-processlist-id>adminProcessListBonitaV2</admin-app-processlist-id>
-		<admin-app-profilelist-id>adminProfileListBonitaV1</admin-app-profilelist-id>
-		<admin-app-tasklist-id>adminTaskListBonitaV2</admin-app-tasklist-id>
-		<admin-app-taskdetails-id>adminTaskDetailsBonitaV1</admin-app-taskdetails-id>
-		<admin-app-installexportorganization-id>adminInstallExportOrganizationBonitaV1</admin-app-installexportorganization-id>
-		<admin-app-resourcelist-id>adminResourceListBonitaV1</admin-app-resourcelist-id>
 	</properties>
 
 
@@ -115,6 +103,10 @@
 					<version>1.8</version>
 				</plugin>
 				<plugin>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>3.1.2</version>
+				</plugin>
+				<plugin>
 					<groupId>com.coderplus.maven.plugins</groupId>
 					<artifactId>copy-rename-maven-plugin</artifactId>
 					<version>1.0</version>
@@ -142,11 +134,11 @@
 									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-case-list</artifactId>
 									<version>${project.version}</version>
+									<classifier>sources</classifier>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
-							<includes>resources/page.json,resources/assets/**</includes>
-							<outputDirectory>${web.pages.dir}/${admin-app-caselist-id}</outputDirectory>
+							<outputDirectory>${web.pages.dir}</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
@@ -163,11 +155,11 @@
 									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-case-details</artifactId>
 									<version>${project.version}</version>
+									<classifier>sources</classifier>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
-							<includes>resources/page.json,resources/assets/**</includes>
-							<outputDirectory>${web.pages.dir}/${admin-app-casedetails-id}</outputDirectory>
+							<outputDirectory>${web.pages.dir}</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
@@ -184,11 +176,11 @@
 									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-user-list</artifactId>
 									<version>${project.version}</version>
+									<classifier>sources</classifier>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
-							<includes>resources/page.json,resources/assets/**</includes>
-							<outputDirectory>${web.pages.dir}/${admin-app-userlist-id}</outputDirectory>
+							<outputDirectory>${web.pages.dir}</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
@@ -205,11 +197,11 @@
 									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-group-list</artifactId>
 									<version>${project.version}</version>
+									<classifier>sources</classifier>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
-							<includes>resources/page.json,resources/assets/**</includes>
-							<outputDirectory>${web.pages.dir}/${admin-app-grouplist-id}</outputDirectory>
+							<outputDirectory>${web.pages.dir}</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
@@ -226,11 +218,11 @@
 									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-role-list</artifactId>
 									<version>${project.version}</version>
+									<classifier>sources</classifier>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
-							<includes>resources/page.json,resources/assets/**</includes>
-							<outputDirectory>${web.pages.dir}/${admin-app-rolelist-id}</outputDirectory>
+							<outputDirectory>${web.pages.dir}</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
@@ -247,11 +239,11 @@
 									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-process-list</artifactId>
 									<version>${project.version}</version>
+									<classifier>sources</classifier>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
-							<includes>resources/page.json,resources/assets/**</includes>
-							<outputDirectory>${web.pages.dir}/${admin-app-processlist-id}</outputDirectory>
+							<outputDirectory>${web.pages.dir}</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
@@ -268,11 +260,11 @@
 									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-profile-list</artifactId>
 									<version>${project.version}</version>
+									<classifier>sources</classifier>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
-							<includes>resources/page.json,resources/assets/**</includes>
-							<outputDirectory>${web.pages.dir}/${admin-app-profilelist-id}</outputDirectory>
+							<outputDirectory>${web.pages.dir}</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
@@ -289,11 +281,11 @@
 									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-task-list</artifactId>
 									<version>${project.version}</version>
+									<classifier>sources</classifier>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
-							<includes>resources/page.json,resources/assets/**</includes>
-							<outputDirectory>${web.pages.dir}/${admin-app-tasklist-id}</outputDirectory>
+							<outputDirectory>${web.pages.dir}</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
@@ -310,11 +302,11 @@
 									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-task-details</artifactId>
 									<version>${project.version}</version>
+									<classifier>sources</classifier>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
-							<includes>resources/page.json,resources/assets/**</includes>
-							<outputDirectory>${web.pages.dir}/${admin-app-taskdetails-id}</outputDirectory>
+							<outputDirectory>${web.pages.dir}</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
@@ -331,11 +323,11 @@
 									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-install-export-organization</artifactId>
 									<version>${project.version}</version>
+									<classifier>sources</classifier>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
-							<includes>resources/page.json,resources/assets/**</includes>
-							<outputDirectory>${web.pages.dir}/${admin-app-installexportorganization-id}</outputDirectory>
+							<outputDirectory>${web.pages.dir}</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
@@ -352,11 +344,11 @@
 									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-resource-list</artifactId>
 									<version>${project.version}</version>
+									<classifier>sources</classifier>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
-							<includes>resources/page.json,resources/assets/**</includes>
-							<outputDirectory>${web.pages.dir}/${admin-app-resourcelist-id}</outputDirectory>
+							<outputDirectory>${web.pages.dir}</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
@@ -373,11 +365,11 @@
 									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>layout-bonita</artifactId>
 									<version>${project.version}</version>
+									<classifier>sources</classifier>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
-							<includes>resources/page.json,resources/assets/**</includes>
-							<outputDirectory>${web.pages.dir}/${living-app-layout-id}</outputDirectory>
+							<outputDirectory>${web.pages.dir}</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
@@ -395,6 +387,12 @@
 									<artifactId>layout-bonita</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
+									<fileMappers>
+										<org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+											<pattern>^\Qresources/widgets/\E</pattern>
+											<replacement>./</replacement>
+										</org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+									</fileMappers>
 								</artifactItem>
 							</artifactItems>
 							<includes>resources/widgets/custom*/**</includes>
@@ -484,353 +482,12 @@
 							<goal>run</goal>
 						</goals>
 					</execution>
-					<execution>
-						<id>move-admin-caselist-page-resources</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<target>
-								<move todir="${web.pages.dir}/${admin-app-caselist-id}"
-									failonerror="true">
-									<fileset dir="${web.pages.dir}/${admin-app-caselist-id}/resources" />
-								</move>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>move-admin-casedetails-page-resources</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<target>
-								<move todir="${web.pages.dir}/${admin-app-casedetails-id}"
-									failonerror="true">
-									<fileset dir="${web.pages.dir}/${admin-app-casedetails-id}/resources" />
-								</move>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>move-admin-userlist-page-resources</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<target>
-								<move todir="${web.pages.dir}/${admin-app-userlist-id}"
-									failonerror="true">
-									<fileset dir="${web.pages.dir}/${admin-app-userlist-id}/resources" />
-								</move>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>move-admin-grouplist-page-resources</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<target>
-								<move todir="${web.pages.dir}/${admin-app-grouplist-id}"
-									failonerror="true">
-									<fileset dir="${web.pages.dir}/${admin-app-grouplist-id}/resources" />
-								</move>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>move-admin-rolelist-page-resources</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<target>
-								<move todir="${web.pages.dir}/${admin-app-rolelist-id}"
-									failonerror="true">
-									<fileset dir="${web.pages.dir}/${admin-app-rolelist-id}/resources" />
-								</move>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>move-admin-processlist-page-resources</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<target>
-								<move todir="${web.pages.dir}/${admin-app-processlist-id}"
-									failonerror="true">
-									<fileset dir="${web.pages.dir}/${admin-app-processlist-id}/resources" />
-								</move>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>move-admin-profilelist-page-resources</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<target>
-								<move todir="${web.pages.dir}/${admin-app-profilelist-id}"
-									failonerror="true">
-									<fileset dir="${web.pages.dir}/${admin-app-profilelist-id}/resources" />
-								</move>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>move-admin-tasklist-page-resources</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<target>
-								<move todir="${web.pages.dir}/${admin-app-tasklist-id}"
-									failonerror="true">
-									<fileset dir="${web.pages.dir}/${admin-app-tasklist-id}/resources" />
-								</move>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>move-admin-taskdetails-page-resources</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<target>
-								<move todir="${web.pages.dir}/${admin-app-taskdetails-id}"
-									failonerror="true">
-									<fileset dir="${web.pages.dir}/${admin-app-taskdetails-id}/resources" />
-								</move>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>move-admin-installexportorganization-page-resources</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<target>
-								<move todir="${web.pages.dir}/${admin-app-installexportorganization-id}"
-									failonerror="true">
-									<fileset dir="${web.pages.dir}/${admin-app-installexportorganization-id}/resources" />
-								</move>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>move-admin-resourcelist-page-resources</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<target>
-								<move todir="${web.pages.dir}/${admin-app-resourcelist-id}"
-									failonerror="true">
-									<fileset dir="${web.pages.dir}/${admin-app-resourcelist-id}/resources" />
-								</move>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>move-layout-page-resources</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<target>
-								<move todir="${web.pages.dir}/${living-app-layout-id}"
-									failonerror="true">
-									<fileset dir="${web.pages.dir}/${living-app-layout-id}/resources" />
-								</move>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>move-widgets</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<target>
-								<move todir="${web.widgets.dir}">
-									<fileset dir="${web.widgets.dir}/resources/widgets">
-										<include name="**" />
-									</fileset>
-								</move>
-								<delete dir="${web.widgets.dir}/resources" failonerror="true" />
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
 				</executions>
 			</plugin>
 			<plugin>
 				<groupId>com.coderplus.maven.plugins</groupId>
 				<artifactId>copy-rename-maven-plugin</artifactId>
 				<executions>
-					<execution>
-						<id>rename-admin-caselist-page-json-file</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<sourceFile>${web.pages.dir}/${admin-app-caselist-id}/page.json</sourceFile>
-							<destinationFile>${web.pages.dir}/${admin-app-caselist-id}/${admin-app-caselist-id}.json</destinationFile>
-							<overWrite>true</overWrite>
-						</configuration>
-						<goals>
-							<goal>rename</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>rename-admin-casedetails-page-json-file</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<sourceFile>${web.pages.dir}/${admin-app-casedetails-id}/page.json</sourceFile>
-							<destinationFile>${web.pages.dir}/${admin-app-casedetails-id}/${admin-app-casedetails-id}.json</destinationFile>
-							<overWrite>true</overWrite>
-						</configuration>
-						<goals>
-							<goal>rename</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>rename-admin-userlist-page-json-file</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<sourceFile>${web.pages.dir}/${admin-app-userlist-id}/page.json</sourceFile>
-							<destinationFile>${web.pages.dir}/${admin-app-userlist-id}/${admin-app-userlist-id}.json</destinationFile>
-							<overWrite>true</overWrite>
-						</configuration>
-						<goals>
-							<goal>rename</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>rename-admin-grouplist-page-json-file</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<sourceFile>${web.pages.dir}/${admin-app-grouplist-id}/page.json</sourceFile>
-							<destinationFile>${web.pages.dir}/${admin-app-grouplist-id}/${admin-app-grouplist-id}.json</destinationFile>
-							<overWrite>true</overWrite>
-						</configuration>
-						<goals>
-							<goal>rename</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>rename-admin-rolelist-page-json-file</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<sourceFile>${web.pages.dir}/${admin-app-rolelist-id}/page.json</sourceFile>
-							<destinationFile>${web.pages.dir}/${admin-app-rolelist-id}/${admin-app-rolelist-id}.json</destinationFile>
-							<overWrite>true</overWrite>
-						</configuration>
-						<goals>
-							<goal>rename</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>rename-admin-processlist-page-json-file</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<sourceFile>${web.pages.dir}/${admin-app-processlist-id}/page.json</sourceFile>
-							<destinationFile>${web.pages.dir}/${admin-app-processlist-id}/${admin-app-processlist-id}.json</destinationFile>
-							<overWrite>true</overWrite>
-						</configuration>
-						<goals>
-							<goal>rename</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>rename-admin-profilelist-page-json-file</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<sourceFile>${web.pages.dir}/${admin-app-profilelist-id}/page.json</sourceFile>
-							<destinationFile>${web.pages.dir}/${admin-app-profilelist-id}/${admin-app-profilelist-id}.json</destinationFile>
-							<overWrite>true</overWrite>
-						</configuration>
-						<goals>
-							<goal>rename</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>rename-admin-tasklist-page-json-file</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<sourceFile>${web.pages.dir}/${admin-app-tasklist-id}/page.json</sourceFile>
-							<destinationFile>${web.pages.dir}/${admin-app-tasklist-id}/${admin-app-tasklist-id}.json</destinationFile>
-							<overWrite>true</overWrite>
-						</configuration>
-						<goals>
-							<goal>rename</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>rename-admin-taskdetails-page-json-file</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<sourceFile>${web.pages.dir}/${admin-app-taskdetails-id}/page.json</sourceFile>
-							<destinationFile>${web.pages.dir}/${admin-app-taskdetails-id}/${admin-app-taskdetails-id}.json</destinationFile>
-							<overWrite>true</overWrite>
-						</configuration>
-						<goals>
-							<goal>rename</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>rename-admin-installexportorganization-page-json-file</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<sourceFile>${web.pages.dir}/${admin-app-installexportorganization-id}/page.json</sourceFile>
-							<destinationFile>${web.pages.dir}/${admin-app-installexportorganization-id}/${admin-app-installexportorganization-id}.json</destinationFile>
-							<overWrite>true</overWrite>
-						</configuration>
-						<goals>
-							<goal>rename</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>rename-admin-resourcelist-page-json-file</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<sourceFile>${web.pages.dir}/${admin-app-resourcelist-id}/page.json</sourceFile>
-							<destinationFile>${web.pages.dir}/${admin-app-resourcelist-id}/${admin-app-resourcelist-id}.json</destinationFile>
-							<overWrite>true</overWrite>
-						</configuration>
-						<goals>
-							<goal>rename</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>rename-layout-page-json-file</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<sourceFile>${web.pages.dir}/${living-app-layout-id}/page.json</sourceFile>
-							<destinationFile>${web.pages.dir}/${living-app-layout-id}/${living-app-layout-id}.json</destinationFile>
-							<overWrite>true</overWrite>
-						</configuration>
-						<goals>
-							<goal>rename</goal>
-						</goals>
-					</execution>
 					<execution>
 						<id>rename-to-bos-extension</id>
 						<phase>package</phase>
