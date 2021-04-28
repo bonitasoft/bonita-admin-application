@@ -30,73 +30,73 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.bonitasoft.web.pages</groupId>
+			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-case-list</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>org.bonitasoft.web.pages</groupId>
+			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-case-details</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>org.bonitasoft.web.pages</groupId>
+			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-user-list</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>org.bonitasoft.web.pages</groupId>
+			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-group-list</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>org.bonitasoft.web.pages</groupId>
+			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-role-list</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>org.bonitasoft.web.pages</groupId>
+			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-process-list</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>org.bonitasoft.web.pages</groupId>
+			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-profile-list</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>org.bonitasoft.web.pages</groupId>
+			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-task-list</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>org.bonitasoft.web.pages</groupId>
+			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-task-details</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>org.bonitasoft.web.pages</groupId>
+			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-install-export-organization</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>org.bonitasoft.web.pages</groupId>
+			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-resource-list</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>org.bonitasoft.web.pages</groupId>
+			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>layout-bonita</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
@@ -139,7 +139,7 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.bonitasoft.web.pages</groupId>
+									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-case-list</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
@@ -160,7 +160,7 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.bonitasoft.web.pages</groupId>
+									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-case-details</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
@@ -181,7 +181,7 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.bonitasoft.web.pages</groupId>
+									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-user-list</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
@@ -202,7 +202,7 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.bonitasoft.web.pages</groupId>
+									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-group-list</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
@@ -223,7 +223,7 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.bonitasoft.web.pages</groupId>
+									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-role-list</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
@@ -244,7 +244,7 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.bonitasoft.web.pages</groupId>
+									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-process-list</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
@@ -265,7 +265,7 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.bonitasoft.web.pages</groupId>
+									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-profile-list</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
@@ -286,7 +286,7 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.bonitasoft.web.pages</groupId>
+									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-task-list</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
@@ -307,7 +307,7 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.bonitasoft.web.pages</groupId>
+									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-task-details</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
@@ -328,7 +328,7 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.bonitasoft.web.pages</groupId>
+									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-install-export-organization</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
@@ -349,7 +349,7 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.bonitasoft.web.pages</groupId>
+									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>page-admin-resource-list</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
@@ -370,7 +370,7 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.bonitasoft.web.pages</groupId>
+									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>layout-bonita</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
@@ -391,7 +391,7 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.bonitasoft.web.pages</groupId>
+									<groupId>org.bonitasoft.web.page</groupId>
 									<artifactId>layout-bonita</artifactId>
 									<version>${project.version}</version>
 									<type>zip</type>
