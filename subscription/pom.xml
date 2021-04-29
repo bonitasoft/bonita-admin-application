@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.bonitasoft.web.application</groupId>
+		<artifactId>bonita-admin-application</artifactId>
+		<version>7.13.0-SNAPSHOT</version>
+		<relativePath>../community</relativePath>
+	</parent>
+
+	<artifactId>bonita-admin-application-sp</artifactId>
+	<packaging>pom</packaging>
+
+	<name>Bonita Admin Application SP</name>
+
+	<properties>
+		<web.pages.dir>${project.build.directory}/web_page</web.pages.dir>
+		<web.widgets.dir>${project.build.directory}/web_widgets</web.widgets.dir>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.bonitasoft.web.page</groupId>
+			<artifactId>page-admin-case-visu</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bonitasoft.web.page</groupId>
+			<artifactId>page-admin-process-visu</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bonitasoft.web.page</groupId>
+			<artifactId>page-admin-monitoring</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bonitasoft.web.page</groupId>
+			<artifactId>page-admin-license</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>get-admin-application-zip</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.bonitasoft.web.application</groupId>
+									<artifactId>bonita-admin-application</artifactId>
+									<version>${project.version}</version>
+									<type>zip</type>
+								</artifactItem>
+							</artifactItems>
+							<outputDirectory>${project.build.directory}/application_zip</outputDirectory>
+							<overWriteReleases>true</overWriteReleases>
+							<overWriteSnapshots>true</overWriteSnapshots>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
