@@ -8,8 +8,8 @@ pipeline {
             steps {
                 sh "./mvnw deploy -DskipTests -DaltDeploymentRepository=${env.ALT_DEPLOYMENT_REPOSITORY_TAG}"
                 withCredentials([string(credentialsId: 'github-api', variable: 'GITHUB_API_TOKEN')]) {
-                    sh "./infrastructure/upload-github-release-asset.sh github_api_token=$GITHUB_API_TOKEN tag=${params.version} filename=./target/bonita-admin-application-${params.version}.bos"
-                    sh "./infrastructure/upload-github-release-asset.sh github_api_token=$GITHUB_API_TOKEN tag=${params.version} filename=./target/bonita-admin-application-sp-${params.version}.bos" 
+                    sh "./infrastructure/upload-github-release-asset.sh github_api_token=$GITHUB_API_TOKEN tag=${params.version} filename=./community/target/bonita-admin-application-${params.version}.bos"
+                    sh "./infrastructure/upload-github-release-asset.sh github_api_token=$GITHUB_API_TOKEN tag=${params.version} filename=./subscription/target/bonita-admin-application-sp-${params.version}.bos"
                 }
             }
         }

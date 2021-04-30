@@ -16,7 +16,7 @@
 			</includes>
 		</fileSet>
 		<fileSet>
-			<directory>${project.basedir}/community</directory>
+			<directory>${project.basedir}</directory>
 			<includes>
 				<include>web_page/**</include>
 				<include>web_widgets/custom*/**</include>
@@ -48,7 +48,6 @@
 			<excludes>
 				<exclude>**/node/**</exclude>
 				<exclude>**/node_modules/**</exclude>
-				<exclude>applications/*.png</exclude>
 			</excludes>
 			<outputDirectory>/</outputDirectory>
 		</fileSet>

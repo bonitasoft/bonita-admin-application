@@ -2,14 +2,14 @@
 		xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
-	<id>zip-sp</id>
+	<id>zip</id>
 	<formats>
 		<format>zip</format>
 	</formats>
 	<includeBaseDirectory>false</includeBaseDirectory>
 	<fileSets>
 		<fileSet>
-			<directory>${project.basedir}/community/applications</directory>
+			<directory>${project.build.directory}/application_zip</directory>
 			<includes>
 				<include>*</include>
 			</includes>
@@ -20,7 +20,7 @@
 			<outputDirectory>/</outputDirectory>
 		</fileSet>
 		<fileSet>
-			<directory>${project.basedir}/subscription/applications</directory>
+			<directory>${project.basedir}/bonita-distrib</directory>
 			<includes>
 				<include>*</include>
 			</includes>
