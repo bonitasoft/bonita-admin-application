@@ -48,6 +48,7 @@
 			<excludes>
 				<exclude>**/node/**</exclude>
 				<exclude>**/node_modules/**</exclude>
+				<exclude>**/target/**</exclude>
 			</excludes>
 			<outputDirectory>/</outputDirectory>
 		</fileSet>
