@@ -44,6 +44,8 @@
 			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-license</artifactId>
 			<version>${project.version}</version>
+			<!-- already provided by the non modifiable super admin app -->
+			<scope>provided</scope>
 			<type>zip</type>
 		</dependency>
 	</dependencies>

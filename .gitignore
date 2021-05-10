@@ -1,7 +1,10 @@
 /target/
 /web_page/
 /web_widgets/
-.idea/
+/.idea/
+/**/target/
 
 .settings
 .project
+*.iml
+/**/*.iml
