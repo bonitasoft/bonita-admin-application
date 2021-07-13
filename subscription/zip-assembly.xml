@@ -25,6 +25,7 @@
 				<include>*</include>
 			</includes>
 			<outputDirectory>/</outputDirectory>
+			<filtered>true</filtered>
 		</fileSet>
 	</fileSets>
 </assembly>
