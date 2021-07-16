@@ -26,6 +26,10 @@
             </includes>
             <outputDirectory>/</outputDirectory>
             <filtered>true</filtered>
+            <nonFilteredFileExtensions>
+                <nonFilteredFileExtension>png</nonFilteredFileExtension>
+                <nonFilteredFileExtension>zip</nonFilteredFileExtension>
+            </nonFilteredFileExtensions>
         </fileSet>
     </fileSets>
     <dependencySets>

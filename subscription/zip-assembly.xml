@@ -26,6 +26,9 @@
 			</includes>
 			<outputDirectory>/</outputDirectory>
 			<filtered>true</filtered>
+			<nonFilteredFileExtensions>
+				<nonFilteredFileExtension>png</nonFilteredFileExtension>
+			</nonFilteredFileExtensions>
 		</fileSet>
 	</fileSets>
 </assembly>
