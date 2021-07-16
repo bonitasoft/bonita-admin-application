@@ -8,11 +8,13 @@
 	<version>7.13.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Bonita Admin Application</name>
+	<name>Bonita Administrator Application</name>
+	<description>This application allows to deploy and manage all the elements of Bonita projects.</description>
 
 	<properties>
-		<web.pages.dir>${project.build.directory}/web_page</web.pages.dir>
-		<web.widgets.dir>${project.build.directory}/web_widgets</web.widgets.dir>
+		<application.version>2.0</application.version>
+		<web.pages.dir>${project.build.directory}/bos-distrib/web_page</web.pages.dir>
+		<web.widgets.dir>${project.build.directory}/bos-distrib/web_widgets</web.widgets.dir>
 	</properties>
 
 	<dependencies>
@@ -147,7 +149,7 @@
 			<plugins>
 				<plugin>
 					<artifactId>maven-assembly-plugin</artifactId>
-					<version>3.1.1</version>
+					<version>3.3.0</version>
 				</plugin>
 				<plugin>
 					<artifactId>maven-dependency-plugin</artifactId>
