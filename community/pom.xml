@@ -8,7 +8,7 @@
 	<version>7.13.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Bonita Administrator Application</name>
+	<name>Bonita Administrator Application Community</name>
 	<description>This application allows to deploy and manage all the elements of Bonita projects.</description>
 
 	<properties>
