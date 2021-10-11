@@ -10,7 +10,7 @@
             <applicationPage customPage="custompage_adminProcessVisuBonita" token="admin-process-visu"/>
             <applicationPage customPage="custompage_adminCaseVisuBonita" token="admin-case-visu"/>
             <applicationPage customPage="custompage_adminCaseDetailsBonitaV4" token="admin-case-details"/>
-            <applicationPage customPage="custompage_adminTaskDetailsBonitaV1" token="admin-task-details"/>
+            <applicationPage customPage="custompage_adminTaskDetailsBonitaV2" token="admin-task-details"/>
             <applicationPage customPage="custompage_adminProcessListBonitaV2" token="admin-process-list"/>
             <applicationPage customPage="custompage_adminCaseListBonitaV1" token="admin-case-list"/>
             <applicationPage customPage="custompage_adminMonitoringBonita" token="admin-monitoring"/>
@@ -44,7 +44,7 @@
                     </applicationMenu>
                 </applicationMenus>
             </applicationMenu>
-            <applicationMenu>
+            <applicationMenu>https://meet.google.com/cty-baou-nrd
                 <displayName>Organization</displayName>
                 <applicationMenus>
                     <applicationMenu applicationPage="admin-user-list">
