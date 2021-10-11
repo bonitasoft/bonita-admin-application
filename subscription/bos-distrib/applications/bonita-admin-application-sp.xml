@@ -44,7 +44,7 @@
                     </applicationMenu>
                 </applicationMenus>
             </applicationMenu>
-            <applicationMenu>https://meet.google.com/cty-baou-nrd
+            <applicationMenu>
                 <displayName>Organization</displayName>
                 <applicationMenus>
                     <applicationMenu applicationPage="admin-user-list">
