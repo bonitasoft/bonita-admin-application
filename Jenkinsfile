@@ -14,7 +14,7 @@ timestamps {
                     def isBaseBranch = currentBranch == 'master' || currentBranch == 'dev' || currentBranch?.startsWith('release-') || currentBranch?.matches('7\\..+\\.x')
                     configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
                         if(!isBaseBranch){
-                            sh "./mvnw -s ${MAVEN_SETTINGS} --no-transfer-progress B clean verify -Djvm=${env.JAVA_HOME_11}/bin/java"
+                            sh "./mvnw -s ${MAVEN_SETTINGS} --no-transfer-progress -B clean verify -Djvm=${env.JAVA_HOME_11}/bin/java"
                         }else{
                             sh "./mvnw -s ${MAVEN_SETTINGS} --no-transfer-progress -B clean deploy -Djvm=${env.JAVA_HOME_11}/bin/java -DaltDeploymentRepository=${env.ALT_DEPLOYMENT_REPOSITORY_SNAPSHOTS}"
                         }
