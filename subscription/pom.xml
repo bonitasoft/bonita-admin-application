@@ -23,13 +23,13 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.bonitasoft.web.page</groupId>
+			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-case-visu</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>com.bonitasoft.web.page</groupId>
+			<groupId>org.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-process-visu</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
