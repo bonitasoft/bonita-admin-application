@@ -14,22 +14,22 @@
 	<artifactId>bonita-admin-application-sp</artifactId>
 	<packaging>pom</packaging>
 
-	<name>Bonita Administrator Application</name>
+	<name>Bonita Administrator Application SP</name>
 	<description>This application allows to deploy and manage all the elements of Bonita projects.</description>
 
 	<properties>
-		<application.version>3.0</application.version>
+		<application.version>4.0</application.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
+			<groupId>com.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-case-visu</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
+			<groupId>com.bonitasoft.web.page</groupId>
 			<artifactId>page-admin-process-visu</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
@@ -71,6 +71,112 @@
 								</artifactItem>
 							</artifactItems>
 							<outputDirectory>${project.build.directory}/application_zip</outputDirectory>
+							<overWriteReleases>true</overWriteReleases>
+							<overWriteSnapshots>true</overWriteSnapshots>
+						</configuration>
+					</execution>
+					<execution>
+						<id>get-bonita-sp-pages-sources</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.bonitasoft.web.page</groupId>
+									<artifactId>page-admin-case-visu</artifactId>
+									<version>${project.version}</version>
+									<classifier>sources</classifier>
+									<type>zip</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>com.bonitasoft.web.page</groupId>
+									<artifactId>page-admin-process-visu</artifactId>
+									<version>${project.version}</version>
+									<classifier>sources</classifier>
+									<type>zip</type>
+								</artifactItem>
+							</artifactItems>
+							<outputDirectory>${web.pages.dir}</outputDirectory>
+							<overWriteReleases>true</overWriteReleases>
+							<overWriteSnapshots>true</overWriteSnapshots>
+						</configuration>
+					</execution>
+					<execution>
+						<id>get-bonita-bpmn-widgets</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.bonitasoft.web.page</groupId>
+									<artifactId>page-admin-process-visu</artifactId>
+									<version>${project.version}</version>
+									<type>zip</type>
+									<fileMappers>
+										<org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+											<pattern>^\Qresources/widgets/\E</pattern>
+											<replacement>./</replacement>
+										</org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+									</fileMappers>
+								</artifactItem>
+								<artifactItem>
+									<groupId>com.bonitasoft.web.page</groupId>
+									<artifactId>page-admin-case-visu</artifactId>
+									<version>${project.version}</version>
+									<type>zip</type>
+									<fileMappers>
+										<org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+											<pattern>^\Qresources/widgets/\E</pattern>
+											<replacement>./</replacement>
+										</org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+									</fileMappers>
+								</artifactItem>
+							</artifactItems>
+							<includes>resources/widgets/custom*/**</includes>
+							<outputDirectory>${web.widgets.dir}</outputDirectory>
+							<overWriteReleases>true</overWriteReleases>
+							<overWriteSnapshots>true</overWriteSnapshots>
+						</configuration>
+					</execution>
+					<execution>
+						<id>get-bonita-bpmn-fragments</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.bonitasoft.web.page</groupId>
+									<artifactId>page-admin-process-visu</artifactId>
+									<version>${project.version}</version>
+									<type>zip</type>
+									<fileMappers>
+										<org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+											<pattern>^\Qresources/fragments/\E</pattern>
+											<replacement>./</replacement>
+										</org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+									</fileMappers>
+								</artifactItem>
+								<artifactItem>
+									<groupId>com.bonitasoft.web.page</groupId>
+									<artifactId>page-admin-case-visu</artifactId>
+									<version>${project.version}</version>
+									<type>zip</type>
+									<fileMappers>
+										<org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+											<pattern>^\Qresources/fragments/\E</pattern>
+											<replacement>./</replacement>
+										</org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+									</fileMappers>
+								</artifactItem>
+							</artifactItems>
+							<includes>resources/fragments/*/**</includes>
+							<outputDirectory>${web.fragments.dir}</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
