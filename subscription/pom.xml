@@ -14,7 +14,7 @@
 	<artifactId>bonita-admin-application-sp</artifactId>
 	<packaging>pom</packaging>
 
-	<name>Bonita Administrator Application SP</name>
+	<name>Bonita Administrator Application</name>
 	<description>This application allows to deploy and manage all the elements of Bonita projects.</description>
 
 	<properties>
