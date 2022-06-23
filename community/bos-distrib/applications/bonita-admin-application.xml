@@ -10,7 +10,7 @@
             <applicationPage customPage="custompage_adminCaseDetailsBonitaV5" token="admin-case-details"/>
             <applicationPage customPage="custompage_adminTaskDetailsBonitaV2" token="admin-task-details"/>
             <applicationPage customPage="custompage_adminProcessListBonitaV3" token="admin-process-list"/>
-            <applicationPage customPage="custompage_adminCaseListBonitaV2" token="admin-case-list"/>
+            <applicationPage customPage="custompage_adminCaseListBonitaV4" token="admin-case-list"/>
             <applicationPage customPage="custompage_adminApplicationListBonita" token="admin-application-list"/>
             <applicationPage customPage="custompage_adminApplicationDetailsBonita" token="admin-application-details"/>
             <applicationPage customPage="custompage_adminBDMBonita" token="admin-bdm"/>
