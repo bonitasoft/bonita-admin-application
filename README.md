@@ -9,7 +9,17 @@ This repository aggregates all the development and distribution artifacts of the
 
 ## Build 
 
-Run `./mvnw clean verify` in a terminal. The result of the build is in the `target` folder:
+### Application for the community edition
+
+To build the Admin application for the community edition of Bonita, run `./mvnw clean verify -pl :bonita-admin-application -am` in a terminal.
+
+### Applications for all editions
+
+Run `./mvnw clean verify` in a terminal.
+
+### Build result
+
+The result of the build is in the `community/target` or `subscription/target`folder. It includes:
 * a .bos archive to import in Bonita Studio
 * a zip file containing the application descriptor and the application icon
 * a zip "with-resources" containing the application descriptor, icon and the pages it relies on 
