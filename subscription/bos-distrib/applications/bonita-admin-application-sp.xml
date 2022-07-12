@@ -9,22 +9,22 @@
             <applicationPage customPage="custompage_adminProcessDetailsBonita" token="admin-process-details"/>
             <applicationPage customPage="custompage_adminProcessVisuBonitaV1" token="admin-process-visu"/>
             <applicationPage customPage="custompage_adminCaseVisuBonitaV1" token="admin-case-visu"/>
-            <applicationPage customPage="custompage_adminCaseDetailsBonitaV5" token="admin-case-details"/>
+            <applicationPage customPage="custompage_adminCaseDetailsBonitaV6" token="admin-case-details"/>
             <applicationPage customPage="custompage_adminTaskDetailsBonitaV2" token="admin-task-details"/>
-            <applicationPage customPage="custompage_adminProcessListBonitaV3" token="admin-process-list"/>
-            <applicationPage customPage="custompage_adminCaseListBonitaV4" token="admin-case-list"/>
+            <applicationPage customPage="custompage_adminProcessListBonitaV4" token="admin-process-list"/>
+            <applicationPage customPage="custompage_adminCaseListBonitaV5" token="admin-case-list"/>
             <applicationPage customPage="custompage_adminMonitoringBonita" token="admin-monitoring"/>
             <applicationPage customPage="custompage_adminApplicationListBonita" token="admin-application-list"/>
             <applicationPage customPage="custompage_adminApplicationDetailsBonita" token="admin-application-details"/>
             <applicationPage customPage="custompage_adminBDMBonita" token="admin-bdm"/>
             <applicationPage customPage="custompage_adminLicenseBonita" token="admin-license"/>
-            <applicationPage customPage="custompage_adminTaskListBonitaV3" token="admin-task-list"/>
-            <applicationPage customPage="custompage_adminUserListBonitaV3" token="admin-user-list"/>
-            <applicationPage customPage="custompage_adminGroupListBonitaV3" token="admin-group-list"/>
-            <applicationPage customPage="custompage_adminRoleListBonitaV3" token="admin-role-list"/>
-            <applicationPage customPage="custompage_adminProfileListBonitaV3" token="admin-profile-list"/>
+            <applicationPage customPage="custompage_adminTaskListBonitaV4" token="admin-task-list"/>
+            <applicationPage customPage="custompage_adminUserListBonitaV4" token="admin-user-list"/>
+            <applicationPage customPage="custompage_adminGroupListBonitaV4" token="admin-group-list"/>
+            <applicationPage customPage="custompage_adminRoleListBonitaV4" token="admin-role-list"/>
+            <applicationPage customPage="custompage_adminProfileListBonitaV4" token="admin-profile-list"/>
             <applicationPage customPage="custompage_adminInstallExportOrganizationBonitaV1" token="admin-install-export-organization"/>
-            <applicationPage customPage="custompage_adminResourceListBonitaV3" token="admin-resource-list"/>
+            <applicationPage customPage="custompage_adminResourceListBonitaV4" token="admin-resource-list"/>
         </applicationPages>
         <applicationMenus>
             <applicationMenu>
