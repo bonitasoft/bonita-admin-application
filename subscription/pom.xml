@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.bonitasoft.web.application</groupId>
 		<artifactId>bonita-admin-application</artifactId>
-		<version>8.0-SNAPSHOT</version>
+		<version>8.0.0.W4</version>
 		<relativePath>../community</relativePath>
 	</parent>
 
