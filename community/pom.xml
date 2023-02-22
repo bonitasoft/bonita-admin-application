@@ -290,6 +290,18 @@
 										</org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
 									</fileMappers>
 								</artifactItem>
+								<artifactItem>
+									<groupId>org.bonitasoft.web.page</groupId>
+									<artifactId>page-admin-case-list</artifactId>
+									<version>${project.version}</version>
+									<type>zip</type>
+									<fileMappers>
+										<org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+											<pattern>^\Qresources/widgets/\E</pattern>
+											<replacement>./</replacement>
+										</org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+									</fileMappers>
+								</artifactItem>
 							</artifactItems>
 							<includes>resources/widgets/custom*/**</includes>
 							<outputDirectory>${web.widgets.dir}</outputDirectory>
