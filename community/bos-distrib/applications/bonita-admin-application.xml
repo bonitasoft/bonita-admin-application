@@ -20,7 +20,7 @@
             <applicationPage customPage="custompage_adminRoleListBonitaV3" token="admin-role-list"/>
             <applicationPage customPage="custompage_adminProfileListBonitaV3" token="admin-profile-list"/>
             <applicationPage customPage="custompage_adminInstallExportOrganizationBonitaV1" token="admin-install-export-organization"/>
-            <applicationPage customPage="custompage_adminResourceListBonitaV3" token="admin-resource-list"/>
+            <applicationPage customPage="custompage_adminResourceListBonitaV6" token="admin-resource-list"/>
         </applicationPages>
         <applicationMenus>
             <applicationMenu>
