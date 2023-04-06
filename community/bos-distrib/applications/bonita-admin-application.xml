@@ -18,9 +18,9 @@
             <applicationPage customPage="custompage_adminUserListBonitaV5" token="admin-user-list"/>
             <applicationPage customPage="custompage_adminGroupListBonitaV5" token="admin-group-list"/>
             <applicationPage customPage="custompage_adminRoleListBonitaV5" token="admin-role-list"/>
-            <applicationPage customPage="custompage_adminProfileListBonitaV5" token="admin-profile-list"/>
+            <applicationPage customPage="custompage_adminProfileListBonitaV6" token="admin-profile-list"/>
             <applicationPage customPage="custompage_adminInstallExportOrganizationBonitaV2" token="admin-install-export-organization"/>
-            <applicationPage customPage="custompage_adminResourceListBonitaV7" token="admin-resource-list"/>
+            <applicationPage customPage="custompage_adminResourceListBonitaV8" token="admin-resource-list"/>
         </applicationPages>
         <applicationMenus>
             <applicationMenu>
