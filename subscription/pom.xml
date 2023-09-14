@@ -11,6 +11,7 @@
 		<relativePath>../community</relativePath>
 	</parent>
 
+    <groupId>com.bonitasoft.web.application</groupId>
 	<artifactId>bonita-admin-application-sp</artifactId>
 	<packaging>pom</packaging>
 
@@ -55,26 +56,6 @@
 			<plugin>
 				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
-					<execution>
-						<id>get-admin-application-zip</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.application</groupId>
-									<artifactId>bonita-admin-application</artifactId>
-									<version>${project.version}</version>
-									<type>zip</type>
-								</artifactItem>
-							</artifactItems>
-							<outputDirectory>${project.build.directory}/application_zip</outputDirectory>
-							<overWriteReleases>true</overWriteReleases>
-							<overWriteSnapshots>true</overWriteSnapshots>
-						</configuration>
-					</execution>
 					<execution>
 						<id>get-bonita-sp-pages-sources</id>
 						<phase>generate-sources</phase>
