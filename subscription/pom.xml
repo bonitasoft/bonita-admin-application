@@ -18,6 +18,13 @@
 	<name>Bonita Administrator Application</name>
 	<description>This application allows to deploy and manage all the elements of Bonita projects.</description>
 
+  <licenses>
+    <license>
+      <name>Bonitasoft Software License</name>
+      <url>http://www.bonitasoft.com</url>
+    </license>
+  </licenses>
+  
 	<properties>
 		<application.version>5.0</application.version>
 	</properties>

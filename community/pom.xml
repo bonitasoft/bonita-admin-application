@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	child.project.url.inherit.append.path="false"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.bonitasoft.web.application</groupId>
@@ -10,6 +11,29 @@
 
 	<name>Bonita Administrator Application</name>
 	<description>This application allows to deploy and manage all the elements of Bonita projects.</description>
+	
+	<url>https://www.bonitasoft.com</url>
+    <licenses>
+        <license>
+            <name>GPL-v2.0</name>
+            <url>http://www.gnu.org/licenses/gpl-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>bonitasoft</id>
+            <name>Bonitasoft</name>
+            <email>rd.user@bonitasoft.com</email>
+            <organization>Bonitasoft</organization>
+            <organizationUrl>https://www.bonitasoft.com</organizationUrl>
+        </developer>
+    </developers>
+    <scm child.scm.connection.inherit.append.path="false" child.scm.developerConnection.inherit.append.path="false" child.scm.url.inherit.append.path="false">
+        <connection>scm:git:git@github.com:bonitasoft/bonita-admin-application.git</connection>
+        <developerConnection>scm:git:git@github.com:bonitasoft/bonita-admin-application.git</developerConnection>
+        <url>https://github.com/bonitasoft/bonita-admin-application</url>
+    </scm>
+
 
 	<properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,6 +49,7 @@
         <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
         <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
         <gmavenplus-plugin.version>3.0.0</gmavenplus-plugin.version>
+        <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
         <groovy.version>3.0.19</groovy.version>
 	</properties>
 
@@ -201,6 +226,11 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>
                     <version>${build-helper-maven-plugin.version}</version>
+                </plugin>
+                <plugin>
+                  <groupId>org.codehaus.mojo</groupId>
+                  <artifactId>flatten-maven-plugin</artifactId>
+                  <version>${flatten-maven-plugin.version}</version>
                 </plugin>
 			</plugins>
 		</pluginManagement>
@@ -454,6 +484,35 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <executions>
+                  <!-- enable flattening -->
+                  <execution>
+                    <id>flatten</id>
+                    <goals>
+                      <goal>flatten</goal>
+                    </goals>
+                    <phase>process-resources</phase>
+                    <configuration>
+                      <flattenMode>ossrh</flattenMode>
+                      <updatePomFile>true</updatePomFile>
+                      <pomElements>
+                        <dependencies>remove</dependencies>
+                      </pomElements>
+                    </configuration>
+                  </execution>
+                  <!-- ensure proper cleanup -->
+                  <execution>
+                    <id>flatten.clean</id>
+                    <goals>
+                      <goal>clean</goal>
+                    </goals>
+                    <phase>clean</phase>
+                  </execution>
+                </executions>
+              </plugin>
 		</plugins>
 	</build>
     <profiles>
