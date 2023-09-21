@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	child.project.url.inherit.append.path="false"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.bonitasoft.web.application</groupId>
-	<artifactId>bonita-admin-application</artifactId>
-	<version>9.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         child.project.url.inherit.append.path="false"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.bonitasoft.web.application</groupId>
+    <artifactId>bonita-admin-application</artifactId>
+    <version>9.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-	<name>Bonita Administrator Application</name>
-	<description>This application allows to deploy and manage all the elements of Bonita projects.</description>
-	
-	<url>https://www.bonitasoft.com</url>
+    <name>Bonita Administrator Application</name>
+    <description>This application allows to deploy and manage all the elements of Bonita projects.</description>
+
+    <url>https://www.bonitasoft.com</url>
     <licenses>
         <license>
             <name>GPL-v2.0</name>
@@ -28,21 +28,22 @@
             <organizationUrl>https://www.bonitasoft.com</organizationUrl>
         </developer>
     </developers>
-    <scm child.scm.connection.inherit.append.path="false" child.scm.developerConnection.inherit.append.path="false" child.scm.url.inherit.append.path="false">
+    <scm child.scm.connection.inherit.append.path="false" child.scm.developerConnection.inherit.append.path="false"
+         child.scm.url.inherit.append.path="false">
         <connection>scm:git:git@github.com:bonitasoft/bonita-admin-application.git</connection>
         <developerConnection>scm:git:git@github.com:bonitasoft/bonita-admin-application.git</developerConnection>
         <url>https://github.com/bonitasoft/bonita-admin-application</url>
     </scm>
 
 
-	<properties>
+    <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<application.version>5.0</application.version>
-		<web.pages.dir>${project.build.outputDirectory}/bos-distrib/web_page</web.pages.dir>
-		<web.widgets.dir>${project.build.outputDirectory}/bos-distrib/web_widgets</web.widgets.dir>
-		<web.fragments.dir>${project.build.outputDirectory}/bos-distrib/web_fragments</web.fragments.dir>
-		
-		<maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
+        <application.version>6.0</application.version>
+        <web.pages.dir>${project.build.outputDirectory}/bos-distrib/web_page</web.pages.dir>
+        <web.widgets.dir>${project.build.outputDirectory}/bos-distrib/web_widgets</web.widgets.dir>
+        <web.fragments.dir>${project.build.outputDirectory}/bos-distrib/web_fragments</web.fragments.dir>
+
+        <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
         <maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
         <maven-dependency-plugin.version>3.6.0</maven-dependency-plugin.version>
         <build-helper-maven-plugin.version>3.4.0</build-helper-maven-plugin.version>
@@ -51,139 +52,139 @@
         <gmavenplus-plugin.version>3.0.0</gmavenplus-plugin.version>
         <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
         <groovy.version>3.0.19</groovy.version>
-	</properties>
+    </properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-case-list</artifactId>
-			<version>${project.version}</version>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-case-details</artifactId>
-			<version>${project.version}</version>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-process-list</artifactId>
-			<version>${project.version}</version>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-process-details</artifactId>
-			<version>${project.version}</version>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-task-list</artifactId>
-			<version>${project.version}</version>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-task-details</artifactId>
-			<version>${project.version}</version>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-user-list</artifactId>
-			<version>${project.version}</version>
-			<!-- already provided by the non modifiable super admin app -->
-			<scope>provided</scope>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-group-list</artifactId>
-			<version>${project.version}</version>
-			<!-- already provided by the non modifiable super admin app -->
-			<scope>provided</scope>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-role-list</artifactId>
-			<version>${project.version}</version>
-			<!-- already provided by the non modifiable super admin app -->
-			<scope>provided</scope>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-profile-list</artifactId>
-			<version>${project.version}</version>
-			<!-- already provided by the non modifiable super admin app -->
-			<scope>provided</scope>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-install-export-organization</artifactId>
-			<version>${project.version}</version>
-			<!-- already provided by the non modifiable super admin app -->
-			<scope>provided</scope>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-resource-list</artifactId>
-			<version>${project.version}</version>
-			<!-- already provided by the non modifiable super admin app -->
-			<scope>provided</scope>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-application-details</artifactId>
-			<version>${project.version}</version>
-			<!-- already provided by the non modifiable super admin app -->
-			<scope>provided</scope>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-application-list</artifactId>
-			<version>${project.version}</version>
-			<!-- already provided by the non modifiable super admin app -->
-			<scope>provided</scope>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-bdm</artifactId>
-			<version>${project.version}</version>
-			<!-- already provided by the non modifiable super admin app -->
-			<scope>provided</scope>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>page-admin-user-details</artifactId>
-			<version>${project.version}</version>
-			<!-- already provided by the non modifiable super admin app -->
-			<scope>provided</scope>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.web.page</groupId>
-			<artifactId>layout-bonita</artifactId>
-			<version>${project.version}</version>
-			<!-- already provided by the distrib -->
-			<scope>provided</scope>
-			<type>zip</type>
-		</dependency>
-	</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-case-list</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-case-details</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-process-list</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-process-details</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-task-list</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-task-details</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-user-list</artifactId>
+            <version>${project.version}</version>
+            <!-- already provided by the non modifiable super admin app -->
+            <scope>provided</scope>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-group-list</artifactId>
+            <version>${project.version}</version>
+            <!-- already provided by the non modifiable super admin app -->
+            <scope>provided</scope>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-role-list</artifactId>
+            <version>${project.version}</version>
+            <!-- already provided by the non modifiable super admin app -->
+            <scope>provided</scope>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-profile-list</artifactId>
+            <version>${project.version}</version>
+            <!-- already provided by the non modifiable super admin app -->
+            <scope>provided</scope>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-install-export-organization</artifactId>
+            <version>${project.version}</version>
+            <!-- already provided by the non modifiable super admin app -->
+            <scope>provided</scope>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-resource-list</artifactId>
+            <version>${project.version}</version>
+            <!-- already provided by the non modifiable super admin app -->
+            <scope>provided</scope>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-application-details</artifactId>
+            <version>${project.version}</version>
+            <!-- already provided by the non modifiable super admin app -->
+            <scope>provided</scope>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-application-list</artifactId>
+            <version>${project.version}</version>
+            <!-- already provided by the non modifiable super admin app -->
+            <scope>provided</scope>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-bdm</artifactId>
+            <version>${project.version}</version>
+            <!-- already provided by the non modifiable super admin app -->
+            <scope>provided</scope>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>page-admin-user-details</artifactId>
+            <version>${project.version}</version>
+            <!-- already provided by the non modifiable super admin app -->
+            <scope>provided</scope>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.bonitasoft.web.page</groupId>
+            <artifactId>layout-bonita</artifactId>
+            <version>${project.version}</version>
+            <!-- already provided by the distrib -->
+            <scope>provided</scope>
+            <type>zip</type>
+        </dependency>
+    </dependencies>
 
-	<build>
-		<pluginManagement>
-			<plugins>
-			  <plugin>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
                     <artifactId>maven-assembly-plugin</artifactId>
                     <version>${maven-assembly-plugin.version}</version>
                     <configuration>
@@ -199,212 +200,212 @@
                     <version>${maven-resources-plugin.version}</version>
                 </plugin>
                 <plugin>
-                      <groupId>org.codehaus.gmavenplus</groupId>
-                      <artifactId>gmavenplus-plugin</artifactId>
-                      <version>${gmavenplus-plugin.version}</version>
-                      <configuration>
+                    <groupId>org.codehaus.gmavenplus</groupId>
+                    <artifactId>gmavenplus-plugin</artifactId>
+                    <version>${gmavenplus-plugin.version}</version>
+                    <configuration>
                         <bindAllProjectProperties>true</bindAllProjectProperties>
                         <bindAllSessionUserProperties>true</bindAllSessionUserProperties>
                         <bindPropertiesToSeparateVariables>false</bindPropertiesToSeparateVariables>
-                      </configuration>
-                      <dependencies>
+                    </configuration>
+                    <dependencies>
                         <dependency>
-                          <groupId>org.codehaus.groovy</groupId>
-                          <artifactId>groovy</artifactId>
-                          <version>${groovy.version}</version>
-                          <scope>runtime</scope>
+                            <groupId>org.codehaus.groovy</groupId>
+                            <artifactId>groovy</artifactId>
+                            <version>${groovy.version}</version>
+                            <scope>runtime</scope>
                         </dependency>
                         <dependency>
-                          <groupId>org.codehaus.groovy</groupId>
-                          <artifactId>groovy-ant</artifactId>
-                          <version>${groovy.version}</version>
-                          <scope>runtime</scope>
+                            <groupId>org.codehaus.groovy</groupId>
+                            <artifactId>groovy-ant</artifactId>
+                            <version>${groovy.version}</version>
+                            <scope>runtime</scope>
                         </dependency>
-                      </dependencies>
-                    </plugin>
+                    </dependencies>
+                </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>
                     <version>${build-helper-maven-plugin.version}</version>
                 </plugin>
                 <plugin>
-                  <groupId>org.codehaus.mojo</groupId>
-                  <artifactId>flatten-maven-plugin</artifactId>
-                  <version>${flatten-maven-plugin.version}</version>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>flatten-maven-plugin</artifactId>
+                    <version>${flatten-maven-plugin.version}</version>
                 </plugin>
-			</plugins>
-		</pluginManagement>
-		<plugins>
-			<plugin>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>get-bonita-pages-sources</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>page-admin-case-list</artifactId>
-									<version>${project.version}</version>
-									<classifier>sources</classifier>
-									<type>zip</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>page-admin-case-details</artifactId>
-									<version>${project.version}</version>
-									<classifier>sources</classifier>
-									<type>zip</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>page-admin-user-list</artifactId>
-									<version>${project.version}</version>
-									<classifier>sources</classifier>
-									<type>zip</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>page-admin-group-list</artifactId>
-									<version>${project.version}</version>
-									<classifier>sources</classifier>
-									<type>zip</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>page-admin-role-list</artifactId>
-									<version>${project.version}</version>
-									<classifier>sources</classifier>
-									<type>zip</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>page-admin-process-list</artifactId>
-									<version>${project.version}</version>
-									<classifier>sources</classifier>
-									<type>zip</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>page-admin-profile-list</artifactId>
-									<version>${project.version}</version>
-									<classifier>sources</classifier>
-									<type>zip</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>page-admin-task-list</artifactId>
-									<version>${project.version}</version>
-									<classifier>sources</classifier>
-									<type>zip</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>page-admin-task-details</artifactId>
-									<version>${project.version}</version>
-									<classifier>sources</classifier>
-									<type>zip</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>page-admin-install-export-organization</artifactId>
-									<version>${project.version}</version>
-									<classifier>sources</classifier>
-									<type>zip</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>page-admin-resource-list</artifactId>
-									<version>${project.version}</version>
-									<classifier>sources</classifier>
-									<type>zip</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>layout-bonita</artifactId>
-									<version>${project.version}</version>
-									<classifier>sources</classifier>
-									<type>zip</type>
-								</artifactItem>
-							</artifactItems>
-							<outputDirectory>${web.pages.dir}</outputDirectory>
-							<overWriteReleases>true</overWriteReleases>
-							<overWriteSnapshots>true</overWriteSnapshots>
-						</configuration>
-					</execution>
-					<execution>
-						<id>get-bonita-layout-widgets</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>layout-bonita</artifactId>
-									<version>${project.version}</version>
-									<type>zip</type>
-									<fileMappers>
-										<org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
-											<pattern>^\Qresources/widgets/\E</pattern>
-											<replacement>./</replacement>
-										</org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
-									</fileMappers>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>page-admin-case-list</artifactId>
-									<version>${project.version}</version>
-									<type>zip</type>
-									<fileMappers>
-										<org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
-											<pattern>^\Qresources/widgets/\E</pattern>
-											<replacement>./</replacement>
-										</org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
-									</fileMappers>
-								</artifactItem>
-							</artifactItems>
-							<includes>resources/widgets/custom*/**</includes>
-							<outputDirectory>${web.widgets.dir}</outputDirectory>
-							<overWriteReleases>true</overWriteReleases>
-							<overWriteSnapshots>true</overWriteSnapshots>
-						</configuration>
-					</execution>
-					<execution>
-						<id>get-bonita-fragments</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>org.bonitasoft.web.page</groupId>
-									<artifactId>page-admin-case-list</artifactId>
-									<version>${project.version}</version>
-									<type>zip</type>
-									<fileMappers>
-										<org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
-											<pattern>^\Qresources/fragments/\E</pattern>
-											<replacement>./</replacement>
-										</org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
-									</fileMappers>
-								</artifactItem>
-							</artifactItems>
-							<includes>resources/fragments/*/**</includes>
-							<outputDirectory>${web.fragments.dir}</outputDirectory>
-							<overWriteReleases>true</overWriteReleases>
-							<overWriteSnapshots>true</overWriteSnapshots>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>get-bonita-pages-sources</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>page-admin-case-list</artifactId>
+                                    <version>${project.version}</version>
+                                    <classifier>sources</classifier>
+                                    <type>zip</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>page-admin-case-details</artifactId>
+                                    <version>${project.version}</version>
+                                    <classifier>sources</classifier>
+                                    <type>zip</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>page-admin-user-list</artifactId>
+                                    <version>${project.version}</version>
+                                    <classifier>sources</classifier>
+                                    <type>zip</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>page-admin-group-list</artifactId>
+                                    <version>${project.version}</version>
+                                    <classifier>sources</classifier>
+                                    <type>zip</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>page-admin-role-list</artifactId>
+                                    <version>${project.version}</version>
+                                    <classifier>sources</classifier>
+                                    <type>zip</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>page-admin-process-list</artifactId>
+                                    <version>${project.version}</version>
+                                    <classifier>sources</classifier>
+                                    <type>zip</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>page-admin-profile-list</artifactId>
+                                    <version>${project.version}</version>
+                                    <classifier>sources</classifier>
+                                    <type>zip</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>page-admin-task-list</artifactId>
+                                    <version>${project.version}</version>
+                                    <classifier>sources</classifier>
+                                    <type>zip</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>page-admin-task-details</artifactId>
+                                    <version>${project.version}</version>
+                                    <classifier>sources</classifier>
+                                    <type>zip</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>page-admin-install-export-organization</artifactId>
+                                    <version>${project.version}</version>
+                                    <classifier>sources</classifier>
+                                    <type>zip</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>page-admin-resource-list</artifactId>
+                                    <version>${project.version}</version>
+                                    <classifier>sources</classifier>
+                                    <type>zip</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>layout-bonita</artifactId>
+                                    <version>${project.version}</version>
+                                    <classifier>sources</classifier>
+                                    <type>zip</type>
+                                </artifactItem>
+                            </artifactItems>
+                            <outputDirectory>${web.pages.dir}</outputDirectory>
+                            <overWriteReleases>true</overWriteReleases>
+                            <overWriteSnapshots>true</overWriteSnapshots>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>get-bonita-layout-widgets</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>layout-bonita</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>zip</type>
+                                    <fileMappers>
+                                        <org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                                            <pattern>^\Qresources/widgets/\E</pattern>
+                                            <replacement>./</replacement>
+                                        </org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                                    </fileMappers>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>page-admin-case-list</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>zip</type>
+                                    <fileMappers>
+                                        <org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                                            <pattern>^\Qresources/widgets/\E</pattern>
+                                            <replacement>./</replacement>
+                                        </org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                                    </fileMappers>
+                                </artifactItem>
+                            </artifactItems>
+                            <includes>resources/widgets/custom*/**</includes>
+                            <outputDirectory>${web.widgets.dir}</outputDirectory>
+                            <overWriteReleases>true</overWriteReleases>
+                            <overWriteSnapshots>true</overWriteSnapshots>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>get-bonita-fragments</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>page-admin-case-list</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>zip</type>
+                                    <fileMappers>
+                                        <org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                                            <pattern>^\Qresources/fragments/\E</pattern>
+                                            <replacement>./</replacement>
+                                        </org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                                    </fileMappers>
+                                </artifactItem>
+                            </artifactItems>
+                            <includes>resources/fragments/*/**</includes>
+                            <outputDirectory>${web.fragments.dir}</outputDirectory>
+                            <overWriteReleases>true</overWriteReleases>
+                            <overWriteSnapshots>true</overWriteSnapshots>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>
@@ -454,67 +455,71 @@
                     </execution>
                 </executions>
             </plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>attach-artifact</goal>
-						</goals>
-						<configuration>
-							<artifacts>
-								<artifact>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>attach-artifact</goal>
+                        </goals>
+                        <configuration>
+                            <artifacts>
+                                <artifact>
                                     <type>bos</type>
                                     <file>${project.build.directory}/${project.artifactId}-${project.version}.bos</file>
                                 </artifact>
                                 <artifact>
                                     <type>zip</type>
                                     <classifier>descriptor</classifier>
-                                    <file>${project.build.directory}/${project.artifactId}-${project.version}-descriptor.zip</file>
+                                    <file>
+                                        ${project.build.directory}/${project.artifactId}-${project.version}-descriptor.zip
+                                    </file>
                                 </artifact>
                                 <artifact>
                                     <type>zip</type>
                                     <classifier>application</classifier>
-                                    <file>${project.build.directory}/${project.artifactId}-${project.version}-application.zip</file>
+                                    <file>
+                                        ${project.build.directory}/${project.artifactId}-${project.version}-application.zip
+                                    </file>
                                 </artifact>
-							</artifacts>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
+                            </artifacts>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>flatten-maven-plugin</artifactId>
                 <executions>
-                  <!-- enable flattening -->
-                  <execution>
-                    <id>flatten</id>
-                    <goals>
-                      <goal>flatten</goal>
-                    </goals>
-                    <phase>process-resources</phase>
-                    <configuration>
-                      <flattenMode>ossrh</flattenMode>
-                      <updatePomFile>true</updatePomFile>
-                      <pomElements>
-                        <dependencies>remove</dependencies>
-                      </pomElements>
-                    </configuration>
-                  </execution>
-                  <!-- ensure proper cleanup -->
-                  <execution>
-                    <id>flatten.clean</id>
-                    <goals>
-                      <goal>clean</goal>
-                    </goals>
-                    <phase>clean</phase>
-                  </execution>
+                    <!-- enable flattening -->
+                    <execution>
+                        <id>flatten</id>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <flattenMode>ossrh</flattenMode>
+                            <updatePomFile>true</updatePomFile>
+                            <pomElements>
+                                <dependencies>remove</dependencies>
+                            </pomElements>
+                        </configuration>
+                    </execution>
+                    <!-- ensure proper cleanup -->
+                    <execution>
+                        <id>flatten.clean</id>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                        <phase>clean</phase>
+                    </execution>
                 </executions>
-              </plugin>
-		</plugins>
-	</build>
+            </plugin>
+        </plugins>
+    </build>
     <profiles>
         <profile>
             <id>release</id>
