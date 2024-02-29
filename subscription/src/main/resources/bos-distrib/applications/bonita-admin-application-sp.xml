@@ -20,7 +20,7 @@
             <applicationPage customPage="custompage_adminLicenseBonita" token="admin-license"/>
             <applicationPage customPage="custompage_adminTaskListBonitaV10" token="admin-task-list"/>
             <applicationPage customPage="custompage_adminUserListBonitaV12" token="admin-user-list"/>
-            <applicationPage customPage="custompage_adminGroupListBonitaV10" token="admin-group-list"/>
+            <applicationPage customPage="custompage_adminGroupListBonitaV11" token="admin-group-list"/>
             <applicationPage customPage="custompage_adminRoleListBonitaV10" token="admin-role-list"/>
             <applicationPage customPage="custompage_adminProfileListBonitaV11" token="admin-profile-list"/>
             <applicationPage customPage="custompage_adminInstallExportOrganizationBonitaV2" token="admin-install-export-organization"/>
