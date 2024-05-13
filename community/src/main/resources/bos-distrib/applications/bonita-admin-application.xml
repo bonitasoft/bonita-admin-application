@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
-    <application token="adminAppEE" version="${application.version}" profile="Administrator" homePage="admin-monitoring" state="ACTIVATED" layout="custompage_BonitaLayoutV18" theme="custompage_themeBonita">
+    <application token="adminApp" version="${application.version}" profile="Administrator" homePage="admin-process-list" state="ACTIVATED" layout="custompage_BonitaLayoutV19" theme="custompage_themeBonita">
         <displayName>${name}</displayName>
         <description>${description}</description>
         <iconPath>bonita-admin-application.png</iconPath>
         <applicationPages>
             <applicationPage customPage="custompage_adminUserDetailsBonita" token="admin-user-details"/>
             <applicationPage customPage="custompage_adminProcessDetailsBonita" token="admin-process-details"/>
-            <applicationPage customPage="custompage_adminProcessVisuBonitaV4" token="admin-process-visu"/>
-            <applicationPage customPage="custompage_adminCaseVisuBonitaV4" token="admin-case-visu"/>
             <applicationPage customPage="custompage_adminCaseDetailsBonitaV10" token="admin-case-details"/>
             <applicationPage customPage="custompage_adminTaskDetailsBonitaV7" token="admin-task-details"/>
             <applicationPage customPage="custompage_adminProcessListBonitaV10" token="admin-process-list"/>
             <applicationPage customPage="custompage_adminCaseListBonitaV15" token="admin-case-list"/>
-            <applicationPage customPage="custompage_adminMonitoringBonita" token="admin-monitoring"/>
             <applicationPage customPage="custompage_adminApplicationListBonita" token="admin-application-list"/>
             <applicationPage customPage="custompage_adminApplicationDetailsBonita" token="admin-application-details"/>
             <applicationPage customPage="custompage_adminBDMBonita" token="admin-bdm"/>
-            <applicationPage customPage="custompage_adminLicenseBonita" token="admin-license"/>
             <applicationPage customPage="custompage_adminTaskListBonitaV10" token="admin-task-list"/>
             <applicationPage customPage="custompage_adminUserListBonitaV12" token="admin-user-list"/>
             <applicationPage customPage="custompage_adminGroupListBonitaV11" token="admin-group-list"/>
@@ -30,9 +26,6 @@
             <applicationMenu>
                 <displayName>BPM</displayName>
                 <applicationMenus>
-                    <applicationMenu applicationPage="admin-monitoring">
-                        <displayName>Monitoring</displayName>
-                    </applicationMenu>
                     <applicationMenu applicationPage="admin-process-list">
                         <displayName>Processes</displayName>
                     </applicationMenu>
@@ -72,9 +65,6 @@
             </applicationMenu>
             <applicationMenu applicationPage="admin-application-list">
                 <displayName>Applications</displayName>
-            </applicationMenu>
-            <applicationMenu applicationPage="admin-license">
-                <displayName>License</displayName>
             </applicationMenu>
         </applicationMenus>
     </application>
