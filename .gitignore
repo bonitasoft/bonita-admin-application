@@ -8,4 +8,6 @@ target/
 .project
 .idea
 *.iml
+
 .flattened-pom.xml
+pom.xml.versionsBackup
