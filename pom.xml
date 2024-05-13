@@ -15,4 +15,15 @@
         <module>subscription</module>
     </modules>
 
+    <build>
+      <pluginManagement>
+        <plugins>
+          <plugin>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>3.1.2</version>
+          </plugin>
+        </plugins>
+      </pluginManagement>
+    </build>
+
 </project>
