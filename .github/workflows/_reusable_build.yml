@@ -63,4 +63,6 @@ jobs:
         if: ${{ inputs.release }}
         env:
           GH_TOKEN: ${{ secrets.BONITA_CI_PAT }}
-        run: gh release upload ${{ inputs.ref }} ./target/bonita-admin-application-${{ inputs.ref }}.bos --repo bonitasoft/bonita-admin-application
+        run: |
+          gh release upload ${{ inputs.ref }} ./community/target/bonita-admin-application-${{ inputs.ref }}.bos --repo bonitasoft/bonita-admin-application
+          gh release upload ${{ inputs.ref }} ./subscription/target/bonita-admin-application-sp-${{ inputs.ref }}.bos --repo bonitasoft/bonita-admin-application
