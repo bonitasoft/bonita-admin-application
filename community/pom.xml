@@ -342,7 +342,7 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>get-bonita-layout-widgets</id>
+                        <id>get-bonita-widgets-sources</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>unpack</goal>
@@ -364,6 +364,18 @@
                                 <artifactItem>
                                     <groupId>org.bonitasoft.web.page</groupId>
                                     <artifactId>page-admin-case-list</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>zip</type>
+                                    <fileMappers>
+                                        <org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                                            <pattern>^\Qresources/widgets/\E</pattern>
+                                            <replacement>./</replacement>
+                                        </org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                                    </fileMappers>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.bonitasoft.web.page</groupId>
+                                    <artifactId>page-admin-process-list</artifactId>
                                     <version>${project.version}</version>
                                     <type>zip</type>
                                     <fileMappers>
