@@ -72,7 +72,7 @@
                         <displayName>BDM definition</displayName>
                     </applicationMenu>
                     <applicationMenu applicationPage="admin-data-retention">
-                        <displayName>Data Retention (GDPR)</displayName>
+                        <displayName>Data retention (GDPR)</displayName>
                     </applicationMenu>
                 </applicationMenus>
             </applicationMenu>
