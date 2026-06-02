@@ -44,6 +44,9 @@
                     <applicationMenu applicationPage="admin-task-list">
                         <displayName>Tasks</displayName>
                     </applicationMenu>
+                    <applicationMenu applicationPage="admin-delegations">
+                        <displayName>Delegations</displayName>
+                    </applicationMenu>
                 </applicationMenus>
             </applicationMenu>
             <applicationMenu>
