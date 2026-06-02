@@ -26,6 +26,7 @@
             <applicationPage customPage="custompage_adminInstallExportOrganizationBonitaV2" token="admin-install-export-organization"/>
             <applicationPage customPage="custompage_adminResourceListBonitaV13" token="admin-resource-list"/>
             <applicationPage customPage="custompage_adminDataRetentionBonita" token="admin-data-retention"/>
+            <applicationPage customPage="custompage_adminDelegationBonita" token="admin-delegations"/>
         </applicationPages>
         <applicationMenus>
             <applicationMenu>
@@ -42,6 +43,9 @@
                     </applicationMenu>
                     <applicationMenu applicationPage="admin-task-list">
                         <displayName>Tasks</displayName>
+                    </applicationMenu>
+                    <applicationMenu applicationPage="admin-delegations">
+                        <displayName>Delegations</displayName>
                     </applicationMenu>
                 </applicationMenus>
             </applicationMenu>
