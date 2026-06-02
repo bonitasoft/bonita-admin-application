@@ -26,6 +26,7 @@
             <applicationPage customPage="custompage_adminInstallExportOrganizationBonita" token="admin-install-export-organization"/>
             <applicationPage customPage="custompage_adminResourceListBonita" token="admin-resource-list"/>
             <applicationPage customPage="custompage_adminDataRetentionBonita" token="admin-data-retention"/>
+            <applicationPage customPage="custompage_adminDelegationBonita" token="admin-delegations"/>
         </applicationPages>
         <applicationMenus>
             <applicationMenu>
