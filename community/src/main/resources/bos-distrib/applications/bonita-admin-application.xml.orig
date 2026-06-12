@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.1">
-    <application token="adminAppEE" version="${application.version}" profile="Administrator" homePage="admin-monitoring" state="ACTIVATED" layout="custompage_BonitaLayoutV25" theme="custompage_themeBonita">
+    <application token="adminApp" version="${application.version}" profile="Administrator" homePage="admin-process-list" state="ACTIVATED" layout="custompage_BonitaLayoutV24" theme="custompage_themeBonita">
         <displayName>${name}</displayName>
         <description>${description}</description>
         <iconPath>bonita-admin-application.png</iconPath>
         <applicationPages>
             <applicationPage customPage="custompage_adminUserDetailsBonita" token="admin-user-details"/>
             <applicationPage customPage="custompage_adminProcessDetailsBonita" token="admin-process-details"/>
-            <applicationPage customPage="custompage_adminProcessVisuBonitaV8" token="admin-process-visu"/>
-            <applicationPage customPage="custompage_adminCaseVisuBonitaV10" token="admin-case-visu"/>
+<<<<<<< HEAD
             <applicationPage customPage="custompage_adminCaseDetailsBonitaV12" token="admin-case-details"/>
             <applicationPage customPage="custompage_adminTaskDetailsBonitaV9" token="admin-task-details"/>
-            <applicationPage customPage="custompage_adminProcessListBonitaV12" token="admin-process-list"/>
+=======
+            <applicationPage customPage="custompage_adminCaseDetailsBonitaV11" token="admin-case-details"/>
+            <applicationPage customPage="custompage_adminTaskDetailsBonitaV8" token="admin-task-details"/>
+>>>>>>> master
+            <applicationPage customPage="custompage_adminProcessListBonitaV11" token="admin-process-list"/>
             <applicationPage customPage="custompage_adminCaseListBonitaV16" token="admin-case-list"/>
-            <applicationPage customPage="custompage_adminMonitoringBonita" token="admin-monitoring"/>
             <applicationPage customPage="custompage_adminApplicationListBonita" token="admin-application-list"/>
             <applicationPage customPage="custompage_adminApplicationDetailsBonita" token="admin-application-details"/>
             <applicationPage customPage="custompage_adminBDMBonita" token="admin-bdm"/>
-            <applicationPage customPage="custompage_adminLicenseBonita" token="admin-license"/>
             <applicationPage customPage="custompage_adminTaskListBonitaV11" token="admin-task-list"/>
             <applicationPage customPage="custompage_adminUserListBonitaV12" token="admin-user-list"/>
             <applicationPage customPage="custompage_adminGroupListBonitaV11" token="admin-group-list"/>
@@ -25,16 +26,11 @@
             <applicationPage customPage="custompage_adminProfileListBonitaV11" token="admin-profile-list"/>
             <applicationPage customPage="custompage_adminInstallExportOrganizationBonitaV2" token="admin-install-export-organization"/>
             <applicationPage customPage="custompage_adminResourceListBonitaV13" token="admin-resource-list"/>
-            <applicationPage customPage="custompage_adminDataRetentionBonita" token="admin-data-retention"/>
-            <applicationPage customPage="custompage_adminDelegationBonita" token="admin-delegations"/>
         </applicationPages>
         <applicationMenus>
             <applicationMenu>
                 <displayName>BPM</displayName>
                 <applicationMenus>
-                    <applicationMenu applicationPage="admin-monitoring">
-                        <displayName>Monitoring</displayName>
-                    </applicationMenu>
                     <applicationMenu applicationPage="admin-process-list">
                         <displayName>Processes</displayName>
                     </applicationMenu>
@@ -43,9 +39,6 @@
                     </applicationMenu>
                     <applicationMenu applicationPage="admin-task-list">
                         <displayName>Tasks</displayName>
-                    </applicationMenu>
-                    <applicationMenu applicationPage="admin-delegations">
-                        <displayName>Delegations</displayName>
                     </applicationMenu>
                 </applicationMenus>
             </applicationMenu>
@@ -69,25 +62,14 @@
                     </applicationMenu>
                 </applicationMenus>
             </applicationMenu>
-            <applicationMenu>
+            <applicationMenu applicationPage="admin-bdm">
                 <displayName>BDM</displayName>
-                <applicationMenus>
-                    <applicationMenu applicationPage="admin-bdm">
-                        <displayName>BDM definition</displayName>
-                    </applicationMenu>
-                    <applicationMenu applicationPage="admin-data-retention">
-                        <displayName>Data retention (GDPR)</displayName>
-                    </applicationMenu>
-                </applicationMenus>
             </applicationMenu>
             <applicationMenu applicationPage="admin-resource-list">
                 <displayName>Resources</displayName>
             </applicationMenu>
             <applicationMenu applicationPage="admin-application-list">
                 <displayName>Applications</displayName>
-            </applicationMenu>
-            <applicationMenu applicationPage="admin-license">
-                <displayName>License</displayName>
             </applicationMenu>
         </applicationMenus>
     </application>
